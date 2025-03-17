@@ -19,7 +19,7 @@
 
 1. 克隆仓库
 ```bash
-git clone https://github.com/yourusername/basicSystem.git
+git clone https://github.com/PAX233/basicSystem.git
 ```
 
 2. 进入项目目录
