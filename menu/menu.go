@@ -1,7 +1,7 @@
 package menu
 
 import (
-	"basicSystem/customer"
+	"SimpleGoUserManager/customer"
 	"fmt"
 	"os"
 	"os/signal"

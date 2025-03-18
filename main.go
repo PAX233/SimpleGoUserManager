@@ -1,8 +1,8 @@
 package main
 
 import (
-	"basicSystem/customer"
-	"basicSystem/menu"
+	"SimpleGoUserManager/customer"
+	"SimpleGoUserManager/menu"
 )
 
 func main() {

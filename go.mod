@@ -1,3 +1,3 @@
-module github.com/PAX233/SimpleGoUserManager
+module SimpleGoUserManager
 
 go 1.24.0
