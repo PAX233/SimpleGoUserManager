@@ -9,7 +9,7 @@ import (
 
 // SaveCustomer 保存客户
 func SaveCustomer() {
-	fmt.Printf("\033[1;30;42m%s\033[0m\n", `--------保存客户--------`)
+	fmt.Printf(MainColor+"%s"+ResetColor+"\n", `--------保存客户--------`)
 
 	// 准备要保存的数据
 	data := customerData{
@@ -41,5 +41,5 @@ func SaveCustomer() {
 	}
 
 	fmt.Println("保存成功！")
-	fmt.Printf("\033[1;30;42m%s\033[0m\n", `--------保存结束--------`)
+	fmt.Printf(MainColor+"%s"+ResetColor+"\n", `--------保存结束--------`)
 }

@@ -7,7 +7,7 @@ import (
 // AddCustomer 添加客户
 func AddCustomer() {
 	for {
-		fmt.Printf("\033[1;30;42m%s\033[0m\n", `--------添加客户--------`)
+		fmt.Printf(MainColor+"%s"+ResetColor+"\n", `--------添加客户--------`)
 
 		var name string
 		fmt.Println("请输入客户姓名：")
@@ -43,7 +43,7 @@ func AddCustomer() {
 			var choice string
 			fmt.Scan(&choice)
 			if choice == "n" {
-				fmt.Printf("\033[1;30;42m%s\033[0m\n", `--------添加结束--------`)
+				fmt.Printf(MainColor+"%s"+ResetColor+"\n", `--------添加结束--------`)
 				return
 			} else if choice == "y" {
 				break

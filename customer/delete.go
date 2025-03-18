@@ -7,7 +7,7 @@ import (
 // DeleteCustomer 删除客户
 func DeleteCustomer() {
 	for {
-		fmt.Printf("\033[1;30;42m%s\033[0m\n", `--------删除客户--------`)
+		fmt.Printf(MainColor+"%s"+ResetColor+"\n", `--------删除客户--------`)
 
 		fmt.Println("请输入要删除的客户id：")
 		var cid int
@@ -31,7 +31,7 @@ func DeleteCustomer() {
 			var choice string
 			fmt.Scan(&choice)
 			if choice == "n" {
-				fmt.Printf("\033[1;30;42m%s\033[0m\n", `--------删除结束--------`)
+				fmt.Printf(MainColor+"%s"+ResetColor+"\n", `--------删除结束--------`)
 				break
 			} else if choice == "y" {
 				break

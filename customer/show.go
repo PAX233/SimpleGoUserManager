@@ -6,7 +6,7 @@ import (
 
 // ShowCustomer 查看客户
 func ShowCustomer() {
-	fmt.Printf("\033[1;30;42m%s\033[0m\n", `--------查看客户--------`)
+	fmt.Printf(MainColor+"%s"+ResetColor+"\n", `--------查看客户--------`)
 
 	// 打印表头
 	fmt.Printf("%-4s | %-10s | %-4s | %-6s | %-20s\n", "ID", "姓名", "年龄", "性别", "邮箱")
@@ -25,5 +25,5 @@ func ShowCustomer() {
 				customer.Email)
 		}
 	}
-	fmt.Printf("\033[1;30;42m%s\033[0m\n", `--------查看结束--------`)
+	fmt.Printf(MainColor+"%s"+ResetColor+"\n", `--------查看结束--------`)
 }

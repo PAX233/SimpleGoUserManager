@@ -6,7 +6,7 @@ import (
 
 // UpdateCustomer 更新客户
 func UpdateCustomer() {
-	fmt.Printf("\033[1;30;42m%s\033[0m\n", `--------更新客户--------`)
+	fmt.Printf(MainColor+"%s"+ResetColor+"\n", `--------更新客户--------`)
 
 	fmt.Println("请输入要更新的客户id：")
 	var cid int
@@ -49,5 +49,5 @@ func UpdateCustomer() {
 
 	fmt.Println("更新成功")
 	fmt.Printf("更新后的用户信息：%v\n", customers[index])
-	fmt.Printf("\033[1;30;42m%s\033[0m\n", `--------更新结束--------`)
+	fmt.Printf(MainColor+"%s"+ResetColor+"\n", `--------更新结束--------`)
 }
