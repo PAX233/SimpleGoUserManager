@@ -32,22 +32,24 @@ cd basicSystem
 go run main.go
 ```
 
-## 代码结构
+## 项目结构
 
 ```
-├── main.go        # 主程序入口
-├── customer/      # 客户相关功能实现
-│   ├── add.go
-│   ├── delete.go
-│   ├── load.go
-│   ├── save.go
-│   ├── show.go
-│   ├── types.go
-│   └── update.go
-├── menu/          # 菜单相关功能实现
-│   └── menu.go
-├── go.mod         # Go模块配置文件
-└── README.md      # 项目说明文档
+├── main.go         # 主程序入口
+├── customer/       # 客户管理模块
+│   ├── add.go      # 客户添加功能
+│   ├── delete.go   # 客户删除功能
+│   ├── update.go   # 客户更新功能
+│   ├── show.go     # 客户展示功能
+│   ├── types.go    # 数据结构定义
+│   ├── load.go     # 数据加载实现
+│   └── save.go     # 数据保存实现
+├── menu/           # 菜单管理系统
+│   └── menu.go     # 菜单渲染与交互
+├── data/           # 数据存储目录
+│   └── customers.json  # 客户数据文件
+├── go.mod          # 依赖管理配置
+└── README.md       # 项目说明文档
 ```
 
 ## 示例输出

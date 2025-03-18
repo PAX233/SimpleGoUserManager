@@ -6,8 +6,8 @@ import (
 
 // AddCustomer 添加客户
 func AddCustomer() {
+	fmt.Printf(MainColor+"%s"+ResetColor+"\n", `----------------------添加客户----------------------`)
 	for {
-		fmt.Printf(MainColor+"%s"+ResetColor+"\n", `--------添加客户--------`)
 
 		var name string
 		fmt.Println("请输入客户姓名：")
@@ -36,14 +36,20 @@ func AddCustomer() {
 
 		customers = append(customers, newCustomer)
 
-		fmt.Printf("用户信息：%v\n", newCustomer)
+		fmt.Printf("用户信息：\nCid：%d\n姓名：%s\n年龄：%d\n性别：%s\n邮箱：%s\n",
+			newCustomer.Cid,
+			newCustomer.Name,
+			newCustomer.Age,
+			newCustomer.Gender,
+			newCustomer.Email)
+		fmt.Printf(MainColor+"%s"+ResetColor+"\n", `----------------------------------------------------`)
 
 		for {
 			fmt.Println("是否继续添加？(y/n)")
 			var choice string
 			fmt.Scan(&choice)
 			if choice == "n" {
-				fmt.Printf(MainColor+"%s"+ResetColor+"\n", `--------添加结束--------`)
+				fmt.Printf(MainColor+"%s"+ResetColor+"\n", `----------------------添加结束----------------------`)
 				return
 			} else if choice == "y" {
 				break

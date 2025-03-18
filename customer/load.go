@@ -9,16 +9,18 @@ import (
 
 // LoadCustomer 加载客户数据
 func LoadCustomer() {
-	// 获取可执行文件所在目录
-	exePath, err := os.Executable()
+	// 获取当前工作目录
+	wd, err := os.Getwd()
 	if err != nil {
-		fmt.Printf("获取程序路径失败：%v\n", err)
+		fmt.Printf("获取当前目录失败：%v\n", err)
 		return
 	}
-	exeDir := filepath.Dir(exePath)
+
+	// 构建data目录路径
+	dataDir := filepath.Join(wd, "data")
 
 	// 尝试读取文件
-	filePath := filepath.Join(exeDir, dataFile)
+	filePath := filepath.Join(dataDir, dataFile)
 	jsonData, err := os.ReadFile(filePath)
 	if err != nil {
 		if os.IsNotExist(err) {

@@ -1,0 +1,26 @@
+{
+    "customers": [
+        {
+            "Cid": 1,
+            "Name": "路明非",
+            "Age": 18,
+            "Gender": "男",
+            "Email": "Mingfei.Lu@karsel.com"
+        },
+        {
+            "Cid": 2,
+            "Name": "Sakura",
+            "Age": 18,
+            "Gender": "女",
+            "Email": "Sakura.Best@loong.com"
+        },
+        {
+            "Cid": 24,
+            "Name": "Manba",
+            "Age": 42,
+            "Gender": "Man",
+            "Email": "Out.Manba@haven.com"
+        }
+    ],
+    "customerId": 24
+}

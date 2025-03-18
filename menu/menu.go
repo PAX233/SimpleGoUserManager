@@ -4,6 +4,8 @@ import (
 	"basicSystem/customer"
 	"fmt"
 	"os"
+	"os/signal"
+	"syscall"
 	"time"
 )
 
@@ -23,8 +25,31 @@ func ShowMenu() {
 	`)
 }
 
+func ExitAndSave() {
+	fmt.Println("\n检测到退出信号，正在保存数据...")
+	customer.SaveCustomer()
+	fmt.Println("数据已保存，程序退出")
+	time.Sleep(1 * time.Second)
+	os.Exit(0)
+}
+
 // HandleUserChoice 处理用户选择
 func HandleUserChoice() {
+	// 设置信号处理
+	sigChan := make(chan os.Signal, 1)
+	signal.Notify(sigChan, syscall.SIGINT, syscall.SIGTERM)
+
+	// 启动goroutine监听信号
+	go func() {
+		<-sigChan
+		ExitAndSave()
+	}()
+
+	// 设置defer，确保函数返回时保存数据
+	defer func() {
+		customer.SaveCustomer()
+	}()
+
 	for {
 		ShowMenu()
 		userChoice := -1
@@ -45,15 +70,11 @@ func HandleUserChoice() {
 		case 5:
 			customer.SaveCustomer()
 		case 6:
-			fmt.Println("正在保存数据...")
-			customer.SaveCustomer()
-			fmt.Println("程序即将退出...")
-			time.Sleep(1 * time.Second)
-			os.Exit(0)
+			ExitAndSave()
 		default:
 			fmt.Println("输入有误")
 		}
 		fmt.Println("自动返回菜单...")
-		time.Sleep(2 * time.Second) // 延时返回菜单
+		time.Sleep(1 * time.Second) // 延时返回菜单
 	}
 }
