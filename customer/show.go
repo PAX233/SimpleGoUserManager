@@ -26,4 +26,5 @@ func ShowCustomer() {
 		}
 	}
 	fmt.Printf(MainColor+"%s"+ResetColor+"\n", `--------查看结束--------`)
+	Pause()
 }

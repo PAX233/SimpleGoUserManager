@@ -45,10 +45,15 @@ func HandleUserChoice() {
 		case 5:
 			customer.SaveCustomer()
 		case 6:
+			fmt.Println("正在保存数据...")
+			customer.SaveCustomer()
+			fmt.Println("程序即将退出...")
+			time.Sleep(1 * time.Second)
 			os.Exit(0)
 		default:
 			fmt.Println("输入有误")
 		}
+		fmt.Println("自动返回菜单...")
 		time.Sleep(2 * time.Second) // 延时返回菜单
 	}
 }
