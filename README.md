@@ -1,4 +1,4 @@
-# basicSystem
+# SimpleGoUserManager
 
 一个简单的用户管理系统示例，使用Go语言实现基本的增删改查(CRUD)功能。
 
@@ -19,7 +19,7 @@
 
 1. 克隆仓库
 ```bash
-git clone https://github.com/PAX233/basicSystem.git
+git clone https://github.com/PAX233/SimpleGoUserManager.git
 ```
 
 2. 进入项目目录

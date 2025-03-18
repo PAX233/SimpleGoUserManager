@@ -1,4 +1,4 @@
-# basicSystem
+# SimpleGoUserManager
 
 A simple user management system implementation with basic CRUD operations using Go.
 
@@ -19,7 +19,7 @@ A simple user management system implementation with basic CRUD operations using 
 
 1. Clone repository
 ```bash
-git clone https://github.com/yourusername/basicSystem.git
+git clone https://github.com/yourusername/SimpleGoUserManager.git
 ```
 
 2. Enter project directory
